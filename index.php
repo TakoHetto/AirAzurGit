@@ -21,6 +21,7 @@
                 include("vues/v_accueil.php");
                 break;
             //test
+            //test2
         }
 
         // vue qui crée le pied de page
