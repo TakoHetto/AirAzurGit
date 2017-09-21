@@ -20,6 +20,7 @@
                   // vue qui crée le contenu de la page d’accueil
                 include("vues/v_accueil.php");
                 break;
+            //test
         }
 
         // vue qui crée le pied de page
