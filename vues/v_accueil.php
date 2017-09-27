@@ -1,5 +1,5 @@
-
 <div id="accueil">
-    Bienvenue sur l'intranet d'AIR AZUR
+Bienvenue sur le TP Air Azur !
 </div>
-    
+
+        

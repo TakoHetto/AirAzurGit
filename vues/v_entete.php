@@ -1,18 +1,21 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/cssGeneral.css"
+        <meta charset="UTF-8">
+        <title>Air Azur</title>
+        <link href="css\cssGeneral.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+
         <div id="bandeau">
             <div id="contenu">
-                <img src="image/avion.jpg" >
-                <div id="menu">
-                    <ul>
-                        <li><a href="index.php?action=acceuil">Acceuil</a></li>
-                        <li><a href="index.php?action=#">Voir le catalogue des vols</a></li>
-                        <li><a href="index.php?action=#">Voir les réservations</a></li>
-                    </ul>
-                </div>
+                <img src="image\avion.jpg" height="300"/>
+
+                <ul id="menu">
+                    <li><a href="index.php?action=accueil">Accueil</a></li>
+                    <li><a href="index.php?action=voirVols">Catalogue</a></li>
+                    <li><a href="index.php?action=voirReservations">Réservations</a></li>
+                </ul>
             </div>
         </div>
+

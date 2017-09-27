@@ -1,31 +1,39 @@
-<html>
-    <head>
-        <title>AirAzur</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-    <?php
+<?php
 
-        if(!isset($_REQUEST['action']))
-            $action = 'accueil';
-        else
-            $action = $_REQUEST['action'];
+session_start();
 
-        // vue qui crée l’en-tête de la page
-        include("vues/v_entete.php") ;
+require_once("modele/function.php");
 
-        switch($action)
-        {
-            case 'accueil':
-                  // vue qui crée le contenu de la page d’accueil
-                include("vues/v_accueil.php");
-                break;
-            //test
-            //test2
-        }
+if (!isset($_REQUEST['action'])) {
+    $action = 'accueil';
+} else {
+    $action = $_REQUEST['action'];
+}
 
-        // vue qui crée le pied de page
-        include("vues/v_pied.php") ;
-    ?>
-    </body>
-<html>
+include("vues/v_entete.php");
+
+switch ($action) {
+    case 'accueil':
+        include("vues/v_accueil.php");
+        break;
+    case 'voirVols' :
+        $lesVols = getLesVols(); //appel la fonction getLesVolss
+        include("vues/v_vols.php");
+        break;
+    case 'formReservation':
+            $_SESSION['numero']=$_REQUEST['numero'];
+            $lesVols=getLesVols();
+            include("vues/v_formReservation.php");
+           // session_destroy();
+            break;
+    case 'validerReservation':
+            $_SESSION['numero']=$_REQUEST['numero'];
+            $_SESSION['nom']=$_REQUEST['nom'];
+            $_SESSION['prenom']=$_REQUEST['prenom'];
+            $reservation = validerReservation();
+            include("vues/v_confirmReservation.php");
+            break;
+}
+
+include("vues/v_pied.php");
+?>

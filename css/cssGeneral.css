@@ -2,7 +2,8 @@ html {
 font:normal 100%/1.2em "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
 }
 
-img {border: 0 none;}
+img {border: 0 none;
+width:500px;}
 
 
 fieldset {
